@@ -4,24 +4,18 @@
 // 82 -> 10
 // 9012 -> 12
 
-
-int Cifra()
+int sum(int B) 
 {
-    System.Console.WriteLine("Введите число: ");
-    return Convert.ToInt32(Console.ReadLine());
+   int s = 0;
+    while (B > 0)
+    {
+        s = s + B%10;
+        B = B/10;
+    }
+return s;
 }
 
-// int Kol() 
-// {
-//     int A = Cifra();
-//     int count = 0;
-//     while (A >0)
-//     {
-//         A = A / 10;
-//         count++;
-//     }
-// return count;
-// }
-
-System.Console.WriteLine($"Сумма цифр числа = {Kol()} ");
+System.Console.WriteLine("Введите число: ");
+int A = Convert.ToInt32(Console.ReadLine());
+System.Console.WriteLine($"Сумма цифр числа = {sum(A)} ");
 
